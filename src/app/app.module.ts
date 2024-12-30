@@ -11,6 +11,7 @@ import { CartPageComponent } from './template/cart-page/cart-page.component';
 import { CompletePurchaseComponent } from './template/complete-purchase/complete-purchase.component';
 import { LoginPageComponent } from './template/login-page/login-page.component';
 import { ProductSingleComponent } from './template/product-single/product-single.component';
+import { ProfilePageComponent } from './template/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductSingleComponent } from './template/product-single/product-single
     CartPageComponent,
     CompletePurchaseComponent,
     LoginPageComponent,
-    ProductSingleComponent
+    ProductSingleComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
