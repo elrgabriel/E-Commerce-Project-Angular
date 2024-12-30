@@ -1,0 +1,38 @@
+.footer {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+  }
+  .footer-start {
+    color: white;
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 5%;
+    width: 40%;
+  }
+  .footer-start p {
+    display: block;
+    text-align: center;
+    position: relative;
+    right: 30%;
+    top: 10px;
+  }
+  .footer-start a {
+    color: white;
+  }
+  .footer-end {
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    right: 5%;
+    width: 40%;
+  }
+  .footer-end img {
+    display: inline-block;
+    position: relative;
+    top: 35%;
+    left: 60%;
+    margin-left: 15px;
+  }
