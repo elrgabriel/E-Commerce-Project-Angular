@@ -12,6 +12,7 @@ import { CompletePurchaseComponent } from './template/complete-purchase/complete
 import { LoginPageComponent } from './template/login-page/login-page.component';
 import { ProductSingleComponent } from './template/product-single/product-single.component';
 import { ProfilePageComponent } from './template/profile-page/profile-page.component';
+import { RegistryPageComponent } from './template/registry-page/registry-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProfilePageComponent } from './template/profile-page/profile-page.compo
     CompletePurchaseComponent,
     LoginPageComponent,
     ProductSingleComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    RegistryPageComponent
   ],
   imports: [
     BrowserModule,
