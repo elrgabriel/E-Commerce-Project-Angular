@@ -10,6 +10,7 @@ import { ErrorPageComponent } from './template/error-page/error-page.component';
 import { CartPageComponent } from './template/cart-page/cart-page.component';
 import { CompletePurchaseComponent } from './template/complete-purchase/complete-purchase.component';
 import { LoginPageComponent } from './template/login-page/login-page.component';
+import { ProductSingleComponent } from './template/product-single/product-single.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginPageComponent } from './template/login-page/login-page.component';
     ErrorPageComponent,
     CartPageComponent,
     CompletePurchaseComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    ProductSingleComponent
   ],
   imports: [
     BrowserModule,
