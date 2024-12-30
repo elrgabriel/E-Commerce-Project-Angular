@@ -8,6 +8,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { HomePageComponent } from './template/home-page/home-page.component';
 import { ErrorPageComponent } from './template/error-page/error-page.component';
 import { CartPageComponent } from './template/cart-page/cart-page.component';
+import { CompletePurchaseComponent } from './template/complete-purchase/complete-purchase.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CartPageComponent } from './template/cart-page/cart-page.component';
     FooterComponent,
     HomePageComponent,
     ErrorPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    CompletePurchaseComponent
   ],
   imports: [
     BrowserModule,
