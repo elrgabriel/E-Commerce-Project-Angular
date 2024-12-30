@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f5;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 30px;
+}
+/*Padding-bottom aumentado para dar mais espaço entre o card e footer.*/
+.login-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    padding-bottom: 15px; /*Padding-bottom aumentado para dar mais espaço entre o card e footer.*/
+}
+
+.login-card h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.9em;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+
+.button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ae7b51;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #a79344;
+}
+
+.form-footer {
+    margin-top: 15px;
+    font-size: 0.85em;
+}
+
+.form-footer a {
+    color: #ae7b51;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
