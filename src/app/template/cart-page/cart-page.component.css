@@ -1,0 +1,117 @@
+.cart-main-content {
+    background-color: #f0f0f5;
+    margin-top: 150px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    column-gap: 10px;
+    padding: 20px;
+    padding-bottom: 200px;
+  }
+  
+  .cart-items-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: fit-content;
+    width: 70%;
+  }
+  .cart-price-details-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: fit-content;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .cart-item-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .cart-img-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .item-name-price-container p {
+    font-size: 16pt;
+  }
+  #cart-price {
+    color: #a79344;
+  }
+  .cart-qty-selector {
+    width: 3rem;
+    height: 3rem;
+    border: 1.5px solid grey;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .cart-total-price-container h3 {
+    font-size: 18pt;
+    font-weight: 600;
+  }
+  
+  .first-row-item {
+    font-size: 14pt;
+    font-weight: 300;
+  }
+  .first-row-price {
+    font-size: 14pt;
+    font-weight: 500;
+  }
+  .second-row-item {
+    font-size: 14pt;
+    font-weight: 300;
+  }
+  .second-row-price {
+    font-size: 14pt;
+    font-weight: 500;
+  }
+  .price-card-third-row a {
+    text-decoration: none;
+    color: black;
+  }
+  .price-card-third-row a:hover {
+    color: #ae7b51;
+  }
+  
+  .price-card-first-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .price-card-second-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-card-third-row {
+    display: block;
+  }
+  .price-card-btn-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+  
+  .btn-finalizar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ae7b51;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-finalizar:hover {
+    background-color: #a79344;
+  }

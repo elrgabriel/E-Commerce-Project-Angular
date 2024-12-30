@@ -7,6 +7,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HomePageComponent } from './template/home-page/home-page.component';
 import { ErrorPageComponent } from './template/error-page/error-page.component';
+import { CartPageComponent } from './template/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ErrorPageComponent } from './template/error-page/error-page.component';
     HeaderComponent,
     FooterComponent,
     HomePageComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
