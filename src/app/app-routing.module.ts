@@ -9,7 +9,7 @@ import { CartPageComponent } from './template/cart-page/cart-page.component';
 import { CompletePurchaseComponent } from './template/complete-purchase/complete-purchase.component';
 import { ErrorPageComponent } from './template/error-page/error-page.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'home-page', title: 'Home' , component: HomePageComponent },
   { path: 'product-single', title: 'Product', component: ProductSingleComponent },
   { path: 'login-page', title: 'Login',component: LoginPageComponent },
