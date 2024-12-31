@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
@@ -13,6 +13,7 @@ import { LoginPageComponent } from './template/login-page/login-page.component';
 import { ProductSingleComponent } from './template/product-single/product-single.component';
 import { ProfilePageComponent } from './template/profile-page/profile-page.component';
 import { RegistryPageComponent } from './template/registry-page/registry-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegistryPageComponent } from './template/registry-page/registry-page.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     provideClientHydration(withEventReplay())
