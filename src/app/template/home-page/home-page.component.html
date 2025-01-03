@@ -1,20 +1,18 @@
 <div class="main-content">
-  <div class="content-item">
+  <div class="content-item" *ngFor="let product of products">
     <div class="item-img-container">
       <a routerLink="/product-single" routerLinkActive="active"
-        ><img class="item-img" src="#"
+        ><img class="item-img" src="{{ product.url }}"
       /></a>
     </div>
     <div class="item-info-container">
       <div class="item-name-container">
-        <a routerLink="/product-single" routerLinkActive="active"
-          >NomeProduto</a
+        <a routerLink="/product-single" routerLinkActive="active">
+          {{ product.title }}</a
         >
       </div>
       <div class="item-price-container">
-        <a routerLink="/product-single" routerLinkActive="active"
-          >PreçoProduto
-        </a>
+        <a routerLink="/product-single" routerLinkActive="active"> bbbb </a>
       </div>
     </div>
   </div>
