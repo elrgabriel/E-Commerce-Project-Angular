@@ -11,7 +11,7 @@ import { ErrorPageComponent } from './template/error-page/error-page.component';
 
 export const routes: Routes = [
   { path: 'home-page', title: 'Home' , component: HomePageComponent },
-  { path: 'product-single', title: 'Product', component: ProductSingleComponent },
+  { path: 'product-single/:id', title: 'Product', component: ProductSingleComponent },
   { path: 'login-page', title: 'Login',component: LoginPageComponent },
   { path: 'registry-page', title: 'Register', component: RegistryPageComponent },
   { path: 'profile-page', title: 'Profile', component: ProfilePageComponent },
