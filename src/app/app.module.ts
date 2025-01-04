@@ -14,7 +14,7 @@ import { ProductSingleComponent } from './template/product-single/product-single
 import { ProfilePageComponent } from './template/profile-page/profile-page.component';
 import { RegistryPageComponent } from './template/registry-page/registry-page.component';
 import { RouterModule } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { provideHttpClient } from '@angular/common/http';
   ],
   providers: [
     provideClientHydration(withEventReplay()),
-    provideHttpClient()
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
