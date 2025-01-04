@@ -1,13 +1,13 @@
 <div class="cart-main-content">
   <div class="cart-items-card">
     <h2>Carrinho de Compras</h2>
-    <div class="cart-item-list-container">
+    <div class="cart-item-list-container" *ngFor="let product of products">
       <div class="cart-img-container">
-        <img src="#" />
+        <img src="{{ product.url }}" />
       </div>
       <div class="item-name-price-container">
-        <p>Bateria Pearl Performance P5500</p>
-        <p id="cart-price">500,00 €</p>
+        <p>{{ product.title }}</p>
+        <p id="cart-price">555 €</p>
       </div>
       <div class="cart-qty-selector-container">
         <input class="cart-qty-selector" type="number" value="1" min="1" />

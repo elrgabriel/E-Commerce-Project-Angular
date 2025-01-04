@@ -34,8 +34,7 @@ export class ProductSingleComponent implements OnInit {
   }
 
   OnAddProductClick(quantity: number) {
-    this.cartService.addProductToCart(this.product)
-    console.log(quantity)
+    this.cartService.addProductToCart(this.product, this.selectedQuantity)
     
   }
 
