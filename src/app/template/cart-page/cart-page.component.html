@@ -10,7 +10,13 @@
         <p id="cart-price">555 €</p>
       </div>
       <div class="cart-qty-selector-container">
-        <input class="cart-qty-selector" type="number" value="1" min="1" />
+        <input
+          class="cart-qty-selector"
+          type="number"
+          [(ngModel)]="product.quantity"
+          (ngModelChange)="onQuantityChange(product, product.quantity!)"
+          min="1"
+        />
       </div>
       <div class="cart-total-price-container">
         <h3>500,00 €</h3>

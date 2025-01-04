@@ -16,6 +16,7 @@ export class CartPageComponent implements OnInit {
 
   private cartSubscription!: Subscription;
   
+  
 
   constructor(private cartService: CartService) { }
   
@@ -27,8 +28,14 @@ export class CartPageComponent implements OnInit {
   }
       
   
-  OnDeleteProductFromCart() {
+  onDeleteProductFromCart() {
     
+  }
+
+  onQuantityChange(product: Products, newQuantity: number) {
+    if (newQuantity > 1) {
+      this.cartService.updateProductQuantityInCar(product.id!,newQuantity)
+    }
   }
 
 }

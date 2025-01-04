@@ -45,8 +45,11 @@ export class CartService {
     }
     console.log(this.cartProducts)
   }
-  
 
+  updateProductQuantityInCar(id: number, quantity: number) {
+    const index = this.cartProducts.findIndex((currentProduct) => currentProduct.id === id)
+    this.cartProducts[index].quantity = quantity
+  }
 
   private getCartFromSessionStorage(): Products[] {
     const cart = sessionStorage.getItem('cart');
