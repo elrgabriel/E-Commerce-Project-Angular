@@ -15,12 +15,18 @@
         <p>Envio Grátis</p>
       </div>
       <div class="purchase-buttons-container">
-        <input id="quantity-selector" type="number" value="1" min="1" />
+        <input
+          id="quantity-selector"
+          type="number"
+          [value]="1"
+          min="1"
+          [(ngModel)]="selectedQuantity"
+        />
         <input
           id="add-purchase-btn"
           type="button"
           value="Adicionar"
-          (click)="OnAddProductClick(product.id)"
+          (click)="OnAddProductClick(selectedQuantity)"
         />
       </div>
     </div>

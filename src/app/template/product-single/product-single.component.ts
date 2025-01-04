@@ -14,7 +14,7 @@ import { CartService } from '../../services/cart.service';
 export class ProductSingleComponent implements OnInit {
 
   product: any;
-  productQuantity: number = 0;
+  selectedQuantity: number = 1;
 
   constructor(
     private selectedProduct: SelectProductService,
@@ -33,8 +33,9 @@ export class ProductSingleComponent implements OnInit {
     }
   }
 
-  OnAddProductClick(id: number) {
+  OnAddProductClick(quantity: number) {
     this.cartService.addProductToCart(this.product)
+    console.log(quantity)
     
   }
 
