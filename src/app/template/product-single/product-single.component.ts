@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SelectProductService } from '../../services/select-product.service';
 import { Title } from '@angular/platform-browser';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-single',
@@ -13,11 +14,13 @@ import { Title } from '@angular/platform-browser';
 export class ProductSingleComponent implements OnInit {
 
   product: any;
+  productQuantity: number = 0;
 
   constructor(
     private selectedProduct: SelectProductService,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private cartService: CartService
   ) {}
   
   ngOnInit(): void {
@@ -28,6 +31,11 @@ export class ProductSingleComponent implements OnInit {
     } else {
       this.router.navigate(['/home-page'])
     }
+  }
+
+  OnAddProductClick(id: number) {
+    this.cartService.addProductToCart(this.product)
+    
   }
 
 }
