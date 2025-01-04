@@ -7,7 +7,9 @@
     </div>
     <div class="item-info-container">
       <div class="item-name-container">
-        <a (click)="onProductClick(product)"> {{ product.title }}</a>
+        <a (click)="onProductClick(product)" routerLinkActive="active">
+          {{ product.title }}</a
+        >
       </div>
       <div class="item-price-container">
         <a (click)="onProductClick(product)"> bbbb </a>

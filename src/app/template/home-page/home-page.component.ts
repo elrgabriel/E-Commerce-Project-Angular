@@ -33,7 +33,6 @@ export class HomePageComponent {
   }
   
   onProductClick(product: any) {
-    console.log('Navigating to product with ID:', product.id);
     this.selectedProduct.setProduct(product)
     this.router.navigate(['/product-single',product.id])
   }

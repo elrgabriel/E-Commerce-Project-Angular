@@ -3,5 +3,7 @@ export interface Products {
     id?: number,
     title: string,
     url: string,
-    thumbnailUrl: string
+    thumbnailUrl: string,
+    quantity?: number
+
 }
