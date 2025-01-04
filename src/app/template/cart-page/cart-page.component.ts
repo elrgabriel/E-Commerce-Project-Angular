@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class CartPageComponent implements OnInit {
 
   products: Products[] = []
-
+  private newQuantity: number = 0
   private cartSubscription!: Subscription;
   
   
@@ -28,13 +28,16 @@ export class CartPageComponent implements OnInit {
   }
       
   
-  onDeleteProductFromCart() {
-    
+  onDeleteProductFromCart(product: Products) {
+
+      this.cartService.removeProductFromCart(product.id!)
+  
   }
 
   onQuantityChange(product: Products, newQuantity: number) {
     if (newQuantity > 1) {
-      this.cartService.updateProductQuantityInCar(product.id!,newQuantity)
+      this.cartService.updateProductQuantityInCar(product.id!, newQuantity)
+      console.log(this.products)
     }
   }
 
