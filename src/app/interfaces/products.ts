@@ -1,9 +1,8 @@
 export interface Products {
-    albumId?: number,
     id?: number,
-    title: string,
-    url: string,
-    thumbnailUrl: string,
+    product_name: string,
+    product_price: number,
+    product_image: string,
     quantity?: number
 
 }
