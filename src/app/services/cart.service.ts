@@ -21,10 +21,8 @@ export class CartService {
       //Se ja existe, muda sua quantidade
       if (index !== -1) {
         this.cartProducts[index].quantity = quantity
-        console.log("TO AQUI IF")
       //Se não existe, é adicionado a lista com a quantidade selecionada pelo utilizador  
       } else {
-        console.log("TO AQUI ELSE")
         product.quantity = quantity
         this.cartProducts.push(product)
         

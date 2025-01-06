@@ -3,11 +3,11 @@
     <h2>Carrinho de Compras</h2>
     <div class="cart-item-list-container" *ngFor="let product of products">
       <div class="cart-img-container">
-        <img src="{{ product.url }}" />
+        <img src="#" />
       </div>
       <div class="item-name-price-container">
-        <p>{{ product.title }}</p>
-        <p id="cart-price">555 €</p>
+        <p>{{ product.product_name }}</p>
+        <p id="cart-price">{{ product.product_price }} €</p>
       </div>
       <div class="cart-qty-selector-container">
         <input

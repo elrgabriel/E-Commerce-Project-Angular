@@ -30,6 +30,7 @@ export class HomePageComponent {
     this.productService.getProducts().subscribe(
       (items) => this.products = items.slice(0,10)  
     )
+    
   }
   
   onProductClick(product: any) {

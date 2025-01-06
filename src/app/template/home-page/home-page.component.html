@@ -1,18 +1,16 @@
 <div class="main-content">
   <div class="content-item" *ngFor="let product of products">
     <div class="item-img-container">
-      <a (click)="onProductClick(product)"
-        ><img class="item-img" src="{{ product.url }}"
-      /></a>
+      <a (click)="onProductClick(product)"><img class="item-img" src="#" /></a>
     </div>
     <div class="item-info-container">
       <div class="item-name-container">
         <a (click)="onProductClick(product)" routerLinkActive="active">
-          {{ product.title }}</a
+          {{ product.product_name }}</a
         >
       </div>
       <div class="item-price-container">
-        <a (click)="onProductClick(product)"> bbbb </a>
+        <a (click)="onProductClick(product)"> ${{ product.product_price }} </a>
       </div>
     </div>
   </div>
