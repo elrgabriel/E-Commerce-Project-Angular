@@ -16,6 +16,7 @@ import { RegistryPageComponent } from './template/registry-page/registry-page.co
 import { RouterModule } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     LoginPageComponent,
     ProductSingleComponent,
     ProfilePageComponent,
-    RegistryPageComponent
+    RegistryPageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
