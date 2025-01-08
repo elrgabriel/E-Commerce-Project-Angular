@@ -32,13 +32,13 @@ export class RegistryPageComponent {
   onSubmit(form: any) {
     if (form.valid) {
       console.log('Form Data:', this.formData);
-      this.sendDataToFunction(this.formData);
+      this.registerUser(this.formData);
     } else {
       console.log('Form is invalid');
     }
   }
 
-  sendDataToFunction(data: any) {
+  registerUser(data: any) {
     this.apiService.createUser(data).subscribe(
       (response) => {
         console.log('User created successfully:', response);

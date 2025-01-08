@@ -17,7 +17,7 @@ export class CartService {
 
   addProductToCart(product: Products, quantity: number) {
       //Descobre se o produto já se encontra na lista do carrinho
-      const index = this.cartProducts.findIndex((currentProduct) => currentProduct.id === product.id)
+      let index = this.cartProducts.findIndex((currentProduct) => currentProduct.id === product.id)
       //Se ja existe, muda sua quantidade
       if (index !== -1) {
         this.cartProducts[index].quantity = quantity
@@ -25,11 +25,12 @@ export class CartService {
       } else {
         product.quantity = quantity
         this.cartProducts.push(product)
-        
+        index = this.cartProducts.length - 1;
         
         }
-        this.cartProductSubject.next([...this.cartProducts]) //emite o update do cartProducts
-        this.saveCartToSessionStorage(this.cartProducts)
+    this.cartProductSubject.next([...this.cartProducts]) //emite o update do cartProducts
+    this.saveCartToSessionStorage(this.cartProducts)
+    this.setTotalProductPrice(index)
     console.log(this.cartProducts)
   }
  
@@ -57,6 +58,18 @@ export class CartService {
   // Function to update cart in sessionStorage
   private saveCartToSessionStorage(cart: Products[]): void {
     sessionStorage.setItem('cart', JSON.stringify(cart)); // Save cart data as a JSON string
+  }
+
+  setTotalProductPrice(id: number) {
+    const index = this.cartProducts.findIndex((currentProduct) => currentProduct.id === id);
+    if (index !== -1) {
+      const product = this.cartProducts[index];
+      const quantity = product.quantity ?? 1; // Default quantity to 1 if undefined
+      product.totalPrice = quantity * product.product_price; // Set total price based on quantity
+      this.cartProductSubject.next([...this.cartProducts]); // Emit updated products
+      this.saveCartToSessionStorage(this.cartProducts); // Save updates
+    }
+    
   }
 
 }
