@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
@@ -14,9 +13,9 @@ import { ProductSingleComponent } from './template/product-single/product-single
 import { ProfilePageComponent } from './template/profile-page/profile-page.component';
 import { RegistryPageComponent } from './template/registry-page/registry-page.component';
 import { RouterModule } from '@angular/router';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; // Importando o HttpClientModule
 import { FormsModule } from '@angular/forms';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './register/register.component'; // Se necessário
 
 @NgModule({
   declarations: [
@@ -31,19 +30,15 @@ import { RegisterComponent } from './register/register.component';
     ProductSingleComponent,
     ProfilePageComponent,
     RegistryPageComponent,
-    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule // Substituindo o provideHttpClient()
   ],
-  providers: [
-    provideClientHydration(withEventReplay()),
-    provideHttpClient(withFetch())
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
