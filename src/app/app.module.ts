@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import { BrowserModule,  provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { AppRoutingModule, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
@@ -14,7 +13,7 @@ import { ProductSingleComponent } from './template/product-single/product-single
 import { ProfilePageComponent } from './template/profile-page/profile-page.component';
 import { RegistryPageComponent } from './template/registry-page/registry-page.component';
 import { RouterModule } from '@angular/router';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http'; // Adicionando o HttpClientModule
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -35,13 +34,12 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
     
   ],
   providers: [
     provideClientHydration(withEventReplay()),
-    provideHttpClient(withFetch())
-  ],
+    provideHttpClient(withFetch())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
