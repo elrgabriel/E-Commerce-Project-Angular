@@ -19,11 +19,13 @@ export class CartPageComponent implements OnInit {
   
 
   constructor(private cartService: CartService) { }
-  
+ 
   ngOnInit(): void {
     this.cartSubscription = this.cartService.cartProducts$.subscribe({
       next: (cartProducts) => { this.products = cartProducts}
     })
+    
+  
 
   }
       
@@ -37,8 +39,18 @@ export class CartPageComponent implements OnInit {
   onQuantityChange(product: Products, newQuantity: number) {
     if (newQuantity > 1) {
       this.cartService.updateProductQuantityInCar(product.id!, newQuantity)
+      this.cartService.setTotalProductPrice(product.id!)
       console.log(this.products)
+    } else {
+      this.cartService.setTotalProductPrice(product.id!)
     }
   }
+
+  get totalCartPrice(): number {
+    return this.products.reduce((sum, p) => sum + (p.totalPrice || 0), 0);
+  }
+
+
+
 
 }

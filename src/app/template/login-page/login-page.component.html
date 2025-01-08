@@ -3,10 +3,20 @@
   <!--card do login-->
   <div class="login-card">
     <h2>Bem-vindo!</h2>
-    <form action="#" method="post">
+    <form
+      action="#"
+      method="post"
+      #loginForm="ngForm"
+      (ngSubmit)="onSubmit(loginForm)"
+    >
       <div class="form-group">
         <label>Email</label>
-        <input type="email" name="login_email" placeholder="Insira o email" />
+        <input
+          type="email"
+          name="login_email"
+          placeholder="Insira o email "
+          [(ngModel)]="formData.email"
+        />
       </div>
       <div class="form-group">
         <label>Palavra-Passe</label>
@@ -14,6 +24,7 @@
           type="password"
           name="login_password"
           placeholder="Insira a palavra-passe"
+          [(ngModel)]="formData.password"
         />
       </div>
       <!--Esqueceu sua senha e recuparar no Footer do card do login -->
