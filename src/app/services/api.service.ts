@@ -7,23 +7,26 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  // URL base do seu backend Flask
-  private baseUrl = 'http://localhost:5000'; // ou a URL do seu servidor Flask
+  
+  private baseUrl = 'http://localhost:5000'; 
 
   constructor(private http: HttpClient) { }
 
-  // Exemplo de função para pegar dados dos usuários
+ 
   getUsers(): Observable<any> {
     return this.http.get(`${this.baseUrl}/api/usuarios`); // Endpoint para pegar usuários
   }
 
-  // Exemplo de função para pegar produtos
+  
   getProducts(): Observable<any> {
     return this.http.get(`${this.baseUrl}/api/produtos`); // Endpoint para pegar produtos
   }
 
-  // Exemplo de função para criar um novo usuário
+  
   createUser(userData: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/usuarios`, userData); // Endpoint para criar usuário
+  }
+  loginUser(userData: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/api/usuarios/login`, userData);
   }
 }
