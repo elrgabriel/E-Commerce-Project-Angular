@@ -1,5 +1,65 @@
+<div class="cart-main-content">
+  <div class="cart-items-card">
+    <h2>Carrinho de Compras</h2>
+    <div class="cart-item-list-container" *ngFor="let product of products">
+      <div class="cart-img-container">
         <img src="{{ product.product_image }}" />
       </div>
       <div class="item-name-price-container">
         <p>{{ product.product_name }}</p>
         <p id="cart-price">{{ product.product_price | currency : "EUR" }}</p>
+      </div>
+      <div class="cart-qty-selector-container">
+        <input
+          class="cart-qty-selector"
+          type="number"
+          [(ngModel)]="product.quantity"
+          (ngModelChange)="onQuantityChange(product, product.quantity!)"
+          min="1"
+        />
+      </div>
+      <div class="cart-total-price-container">
+        <h3>{{ product.totalPrice | currency : "EUR" }}</h3>
+      </div>
+      <div class="delete-btn-container">
+        <img
+          src="assets/icons/delete_icon.svg"
+          height="35px"
+          (click)="onDeleteProductFromCart(product)"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="cart-price-details-card">
+    <div class="price-card-first-row">
+      <div class="first-row-item">
+        <p>{{ products.length }} item{{ products.length > 1 ? "s" : "" }}</p>
+        <p>Envio</p>
+      </div>
+      <div class="first-row-price">
+        <p></p>
+        <p>Grátis</p>
+      </div>
+    </div>
+    <div class="price-card-second-row">
+      <div class="second-row-item">
+        <p>Total (com IVA)</p>
+        <p>Impostos incluídos</p>
+      </div>
+      <div class="second-row-price">
+        <p>{{ totalCartPrice | currency : "EUR" }}</p>
+        <p>89,65 €</p>
+      </div>
+    </div>
+    <div class="price-card-third-row">
+      <a routerLink="**" routerLinkActive="active"
+        >Tem algum código promocional?</a
+      >
+    </div>
+    <div class="price-card-btn-container">
+      <a routerLink="/complete-purchase" routerLinkActive="active"
+        ><input class="btn-finalizar" type="button" value="Finalizar"
+      /></a>
+    </div>
+  </div>
+</div>
